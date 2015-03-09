@@ -63,7 +63,9 @@
 								href='<spring:url value="/login.html"></spring:url>'>Login</a></li>
 						</security:authorize>
 						<security:authorize access="isAuthenticated()">
-							<li><a href='<spring:url value="/logout"></spring:url>'>Logout</a></li>
+							<li><a href='<spring:url value="/logout"></spring:url>'>
+									You are Loged in as ${pageContext.request.userPrincipal.name}
+									&nbsp; Logout</a></li>
 						</security:authorize>
 					</ul>
 				</div>
