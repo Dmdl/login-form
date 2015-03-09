@@ -1,0 +1,11 @@
+/rcapl/home/lakmal/workspace/login-form/src/main/java/com/lakmal/entity/Role.java
+/rcapl/home/lakmal/workspace/login-form/src/main/java/com/lakmal/controller/IndexController.java
+/rcapl/home/lakmal/workspace/login-form/src/main/java/com/lakmal/service/InitDb.java
+/rcapl/home/lakmal/workspace/login-form/src/main/java/com/lakmal/repository/RoleRepository.java
+/rcapl/home/lakmal/workspace/login-form/src/main/java/com/lakmal/entity/User.java
+/rcapl/home/lakmal/workspace/login-form/src/main/java/com/lakmal/service/RoleService.java
+/rcapl/home/lakmal/workspace/login-form/src/main/java/com/lakmal/controller/LoginController.java
+/rcapl/home/lakmal/workspace/login-form/src/main/java/com/lakmal/service/UserService.java
+/rcapl/home/lakmal/workspace/login-form/src/main/java/com/lakmal/service/MyUserDetailsService.java
+/rcapl/home/lakmal/workspace/login-form/src/main/java/com/lakmal/repository/UserRepository.java
+/rcapl/home/lakmal/workspace/login-form/src/main/java/com/lakmal/controller/RegisterController.java
