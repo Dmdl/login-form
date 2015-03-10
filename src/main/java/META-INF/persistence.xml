@@ -3,5 +3,6 @@
 	<persistence-unit name="login-form">
 		<class>com.lakmal.entity.User</class>
 		<class>com.lakmal.entity.Role</class>
+		<class>com.lakmal.entity.Account</class>
 	</persistence-unit>
 </persistence>
