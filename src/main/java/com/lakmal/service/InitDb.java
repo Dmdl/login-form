@@ -28,30 +28,31 @@ public class InitDb {
 
 	@PostConstruct
 	public void initializeDb() {
-		BCryptPasswordEncoder encorder = new BCryptPasswordEncoder();
-		User adminUser = new User();
-		adminUser.setName("admin");
-		adminUser.setPassword(encorder.encode("admin"));
-		adminUser.setEnabled(true);
+		if (null == userRepository.findByName("admin")) {
+			BCryptPasswordEncoder encorder = new BCryptPasswordEncoder();
+			User adminUser = new User();
+			adminUser.setName("admin");
+			adminUser.setPassword(encorder.encode("admin"));
+			adminUser.setEnabled(true);
 
-		Role roleAdmin = new Role();
-		roleAdmin.setName("ROLE_ADMIN");
-		roleRepository.save(roleAdmin);
+			Role roleAdmin = new Role();
+			roleAdmin.setName("ROLE_ADMIN");
+			roleRepository.save(roleAdmin);
 
-		Role roleUser = new Role();
-		roleUser.setName("ROLE_USER");
-		roleRepository.save(roleUser);
+			Role roleUser = new Role();
+			roleUser.setName("ROLE_USER");
+			roleRepository.save(roleUser);
 
-		Account account = new Account();
-		account.setAccountNumber("ABCDEFGH");
-		account.setUser(adminUser);
-		accountRepository.save(account);
+			Account account = new Account();
+			account.setAccountNumber("ABCDEFGH");
+			account.setUser(adminUser);
+			accountRepository.save(account);
 
-		List<Role> roles = new ArrayList<>();
-		roles.add(roleUser);
-		roles.add(roleAdmin);
-		adminUser.setRoles(roles);
-		userRepository.save(adminUser);
-
+			List<Role> roles = new ArrayList<>();
+			roles.add(roleUser);
+			roles.add(roleAdmin);
+			adminUser.setRoles(roles);
+			userRepository.save(adminUser);
+		}
 	}
 }
