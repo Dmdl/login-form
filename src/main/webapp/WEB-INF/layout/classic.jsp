@@ -29,7 +29,6 @@
 <body>
 	<tilesx:useAttribute name="current" />
 	<div class="container">
-
 		<nav class="navbar navbar-inverse">
 			<div class="container-fluid">
 				<div class="navbar-header">
@@ -55,6 +54,9 @@
 							<li class="${current=='account' ? 'active' : ''}"><a
 								href='<spring:url value="/account.html"></spring:url>'>My
 									Account</a></li>
+							<li class="${current=='createAccount' ? 'active' : ''}"><a
+								href='<spring:url value="/account/create.html"></spring:url>'>Create
+									Account</a></li>
 						</security:authorize>
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
@@ -64,7 +66,7 @@
 						</security:authorize>
 						<security:authorize access="isAuthenticated()">
 							<li><a href='<spring:url value="/logout"></spring:url>'>
-									You are Loged in as ${pageContext.request.userPrincipal.name}
+									You are Log in as ${pageContext.request.userPrincipal.name}
 									&nbsp; Logout</a></li>
 						</security:authorize>
 					</ul>
@@ -74,9 +76,9 @@
 
 		<tiles:insertAttribute name="body" />
 		<br> <br>
-		<center>
+		<div class="col-md-2 col-md-offset-5">
 			<tiles:insertAttribute name="footer" />
-		</center>
+		</div>
 	</div>
 </body>
 </html>

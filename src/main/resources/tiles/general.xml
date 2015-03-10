@@ -27,9 +27,15 @@
 	</definition>
 
 	<definition name="account" extends="common">
-		<put-attribute name="title" value="Login" />
+		<put-attribute name="title" value="Account" />
 		<put-attribute name="body" value="/WEB-INF/jsp/account.jsp" />
 		<put-attribute name="current" value="account" />
+	</definition>
+
+	<definition name="create-account" extends="common">
+		<put-attribute name="title" value="Create Account" />
+		<put-attribute name="body" value="/WEB-INF/jsp/create-account.jsp" />
+		<put-attribute name="current" value="createAccount" />
 	</definition>
 
 </tiles-definitions>
