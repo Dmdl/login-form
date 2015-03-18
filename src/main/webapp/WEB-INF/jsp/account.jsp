@@ -18,3 +18,5 @@
 		<p>Account Number : ${account.accountNumber}</p>
 	</c:otherwise>
 </c:choose>
+
+<p>Send Email  <a href='<spring:url value="/account/email.html" />'>click here</a> </p>
